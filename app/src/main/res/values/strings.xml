@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RecyclerViewSample_Kotlin</string>
+    <string name="song">Song :</string>
+    <string name="artiste">Artiste :</string>
+    <string name="views">Views :</string>
+    <string name="album">Album :</string>
+</resources>
