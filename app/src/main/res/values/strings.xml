@@ -4,4 +4,7 @@
     <string name="artiste">Artiste :</string>
     <string name="views">Views :</string>
     <string name="album">Album :</string>
+    <string name="favourite_activity">Favourite Activity</string>
+    <string name="recently_played_songs">Recently Played Songs</string>
+    <string name="favorite_songs">Favorite Songs</string>
 </resources>

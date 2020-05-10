@@ -1,8 +1,14 @@
  package com.example.recyclerviewsample_kotlin
 
+import activities.FavoriteActivity
+import activities.RecentlyPlayedActivity
 import adapters.SampleAdapter
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import classes.SampleItem
 import kotlinx.android.synthetic.main.activity_main.*
@@ -43,4 +49,28 @@ import kotlinx.android.synthetic.main.activity_main.*
 
         return list
     }
+
+
+     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+         val inflater: MenuInflater = menuInflater
+         inflater.inflate(R.menu.song_menu, menu)
+         return true
+     }
+
+     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+         // Handle item selection
+         return when (item.itemId) {
+             R.id.recently_played -> {
+                 val intent = Intent(this, RecentlyPlayedActivity::class.java)
+                 startActivity(intent)
+                 true
+             }
+             R.id.favorite -> {
+                 val intent = Intent(this, FavoriteActivity::class.java)
+                 startActivity(intent)
+                 true
+             }
+             else -> super.onOptionsItemSelected(item)
+         }
+     }
 }
